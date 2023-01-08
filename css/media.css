@@ -31,6 +31,15 @@
         width: 100%;
         margin: 0 auto;
     }
+    
+    .series__cards {
+        grid-template-rows: repeat(6, 190px);
+    }
+    
+    .series__item:nth-child(2) {
+        grid-column-end: -1;
+        grid-row-end: 5;
+    }
 }
 
 @media(max-width: 768px){
@@ -81,6 +90,27 @@
     
     .header__btns {
         justify-content: center;
+    }
+    
+    .series__cards {
+        grid-template-rows: repeat(2, minmax(190px, auto)) repeat(4, 190px);
+    }
+    
+    .series__item:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .series__item:nth-child(4) {
+        grid-column-start: 3;
+        grid-column-end: -1;
+    }
+    .series__item:nth-child(5) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .series__item:nth-child(6) {
+        grid-column-start: 3;
+        grid-column-end: -1;
     }
 }
 
@@ -139,6 +169,59 @@
         flex-direction: column;
         align-items: center;
     }
+    
+    .series .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .series__cards {
+        grid-template-columns: 1fr;
+        grid-template-rows:  minmax(190px, auto) repeat(5, 190px);
+    }
+    
+    .series__item:nth-child(1) {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    
+    .series__item:nth-child(2) {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    
+    .series__item:nth-child(3) {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    
+    .series__item:nth-child(4) {
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    
+    .series__item:nth-child(5) {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    
+    .series__item:nth-child(6) {
+        grid-row-start: 6;
+        grid-row-end: -1;
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
 }
 
 @media(max-width: 500px){
@@ -160,6 +243,12 @@
     .premier__desc {
         margin-bottom: 25px;
     }
+    
+    .series__item:nth-child(1) .series__item-title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    
 }
 
 @media(max-width: 430px){
